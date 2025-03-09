@@ -4,7 +4,11 @@
 
 @layer base {
   body {
-    @apply antialiased text-gray-900 bg-gray-50;
+    @apply antialiased text-gray-900 bg-gray-50 transition-colors;
+  }
+
+  .dark body {
+    @apply bg-gray-900 text-gray-100;
   }
 }
 
@@ -14,7 +18,11 @@
   }
   
   .card {
-    @apply bg-white rounded-xl p-6 shadow-sm border border-gray-100;
+    @apply bg-white rounded-xl p-6 shadow-sm border border-gray-100 transition-colors;
+  }
+
+  .dark .card {
+    @apply bg-gray-800 border-gray-700;
   }
 }
 

@@ -7,18 +7,20 @@ import CustomerDiscovery from './components/customer/CustomerDiscovery';
 import CompetitiveIntel from './components/competitive/CompetitiveIntel';
 import ProductEvolution from './components/product/ProductEvolution';
 import MarketExpansion from './components/expansion/MarketExpansion';
+import AIRecommendations from './components/ai/AIRecommendations';
 
 const queryClient = new QueryClient();
 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
         <Sidebar />
         <Header />
         
         <main className="ml-64 pt-16">
           <div className="p-6 max-w-7xl mx-auto space-y-12">
+            <AIRecommendations />
             <MarketAnalysis />
             <CustomerDiscovery />
             <CompetitiveIntel />
